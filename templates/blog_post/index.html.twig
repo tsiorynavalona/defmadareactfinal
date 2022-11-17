@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body %}
+    {# <h4 class="blog-title">Nos articles</h4>
+
+    <div class="container">
+
+          <div class="row">
+             {% for blog_post in blog_posts %}
+                <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src={{ asset(blog_post.image.url) }} alt="Card image cap">
+                    <div class="card-body">
+                        <h6>{{ blog_post.title }}</h6>
+                        <p class="card-text">{{ blog_post.description | striptags | slice(0, 100) }} [...]</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        
+                            <a class="btn btn-success" href="{{ path('blog_post_show', {'id': blog_post.id}) }}">Lire la suite</a>
+                        
+                        
+                            <small class="text-muted">{{ blog_post.createdAt|date('d-m-Y') }} à {{ blog_post.createdAt|date('H:i') }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <h3>Aucune article</h3>
+            {% endfor %}
+            {{ knp_pagination_render(blog_posts, '@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig') }}
+        </div> #}
+        <div id="root"></div>
+
+    
+{% endblock %}

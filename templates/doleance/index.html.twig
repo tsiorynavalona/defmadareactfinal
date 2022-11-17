@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Doléance{% endblock %}
+
+{% block body %}
+<div id="root"></div>
+{# 
+{% if message is not null %}
+<div class="alert alert-success" role="alert">
+  {{ message }}
+</div>
+{% endif %}
+<div class="doleance-content doleance-head">
+  <p>Vous pouvez nous envoyer vos doléance. L'envoie des doléance est faite pour le public mais chaque doléance reçue doit être modérée</p></br>
+  <a href="#doleance-form" class="btn btn-success">Envoyer doléance</a>
+</div>
+
+
+<div class="doleance-content doleance-list">
+  <h4 class="doleance-title">Les doléances reçues</h4>
+    {% for doleance in doleances %}
+
+        <div class="doleance-post">
+        <h5>Sujet: {{ doleance.subject }}</h5>
+        <hr />
+        {{ doleance.description }}<br />
+        publié le {{ doleance.createdAt | date('d-m-Y') }} par {{ doleance.email }}
+        </div>
+        {{ knp_pagination_render(doleances, '@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig') }}
+    {% endfor %}
+</div>
+<div id="doleance-form" class="doleance-content">
+  <h4 class="doleance-title">Ecrivez vos doléances içi :</h4>
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+{{ form(form) }}
+</div> #}
+{% endblock %}
